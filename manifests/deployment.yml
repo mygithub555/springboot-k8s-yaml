@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "camundakcname-94ab"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "camundakcname-94ab"
+  template:
+    metadata:
+      labels:
+        app: "camundakcname-94ab"
+    spec:
+      containers:
+        - name: "camundakcname-94ab"
+          image: "camundakcnameregistry.azurecr.io/camundakcname"
+          ports:
+          - containerPort: 8080
